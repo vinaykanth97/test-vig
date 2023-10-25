@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon-med.ico">
+    <title>Attachment</title>
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- Datatables css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css">
+    <link href="https://cdn.datatables.net/fixedcolumns/3.3.1/css/fixedColumns.dataTables.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.5.5/css/colReorder.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.1/css/fixedHeader.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.min.css" rel="stylesheet" />
+</head>
+
+<body class="investigation-popups attach-popup">
+    <!-- Wrapper Starts -->
+    <div id="wrapper" class="includes-popup">
+        <div class="d-flex align-items-center justify-content-between popup-header">
+            <h3 class="popup-title">Attachment</h3>
+            <div class="d-flex align-items-center top-btns">
+                <div class="export_excel_btn"></div>
+                <button type="button" class="btn iconic-button print-btn">
+                    <svg id="Component_333_17" data-name="Component 333 – 17" xmlns="http://www.w3.org/2000/svg"
+                        width="32" height="32" viewBox="0 0 32 32">
+                        <rect id="Rectangle_3814" data-name="Rectangle 3814" width="32" height="32" rx="2"
+                            fill="#ffefe5" opacity="0.002"></rect>
+                        <g id="print" transform="translate(4 4)">
+                            <path id="Path_26679" data-name="Path 26679"
+                                d="M19,6V4a4,4,0,0,0-4-4H9A4,4,0,0,0,5,4V6a5.006,5.006,0,0,0-5,5v5a5.006,5.006,0,0,0,5,5,3,3,0,0,0,3,3h8a3,3,0,0,0,3-3,5.006,5.006,0,0,0,5-5V11a5.006,5.006,0,0,0-5-5ZM7,4A2,2,0,0,1,9,2h6a2,2,0,0,1,2,2V6H7ZM17,21a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V17a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1Zm5-5a3,3,0,0,1-3,3V17a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v2a3,3,0,0,1-3-3V11A3,3,0,0,1,5,8H19a3,3,0,0,1,3,3Z"
+                                fill="#666" stroke="#eeeef0" stroke-width="0.8"></path>
+                            <path id="Path_26680" data-name="Path 26680" d="M18,10H16a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Z"
+                                fill="#666" stroke="#eeeef0" stroke-width="0.8"></path>
+                        </g>
+                    </svg>
+                </button>
+                <div class="pagination-provision d-flex align-items-center"></div>
+            </div>
+        </div>
+        <div class="popup-body">
+            <div class="position-relative overflow-auto popup-table">
+                <table class="attach_datatable popup-datatable">
+                    <thead>
+                        <tr>
+                            <th class="input-select"></th>
+                            <th>FILE NAME</th>
+                            <th>DATE</th>
+                            <th>TIME</th>
+                            <th>UPLOADED BY</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="input-select"></td>
+                            <td>Lorem Ipsum is simply dummy text.</td>
+                            <td>08/07/2022</td>
+                            <td>12:00 PM EST</td>
+                            <td>John</td>
+                        </tr>
+                        <tr>
+                            <td class="input-select"></td>
+                            <td>Lorem Ipsum is simply dummy text.</td>
+                            <td>10/06/2022</td>
+                            <td>12:00 PM EST</td>
+                            <td>Denny</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="popup-footer d-flex justify-content-between">
+            <div class="d-flex attach-btn">
+                <button type="button" class="btn iconic-button">
+                    <svg id="Group_11454" data-name="Group 11454" xmlns="http://www.w3.org/2000/svg" width="12.75"
+                        height="18" viewBox="0 0 12.75 18">
+                        <path id="Path_26775" data-name="Path 26775"
+                            d="M8.376,10.521A.376.376,0,0,1,8,10.145V.376a.376.376,0,0,1,.752,0v9.769a.376.376,0,0,1-.376.376"
+                            transform="translate(-2.001 0)" fill="#666" />
+                        <path id="Path_26776" data-name="Path 26776"
+                            d="M10.615,4.133a.375.375,0,0,1-.265-.11L7.245.907,4.139,4.023a.374.374,0,0,1-.53,0,.378.378,0,0,1,0-.532L6.98.11a.374.374,0,0,1,.53,0l3.37,3.382a.376.376,0,0,1,0,.532.372.372,0,0,1-.264.11"
+                            transform="translate(-0.87 0)" fill="#666" />
+                        <path id="Path_26777" data-name="Path 26777"
+                            d="M11.625,20.024H1.125A1.127,1.127,0,0,1,0,18.9V9.127A1.127,1.127,0,0,1,1.125,8h3a.376.376,0,0,1,0,.751h-3a.376.376,0,0,0-.375.376V18.9a.376.376,0,0,0,.375.376h10.5A.376.376,0,0,0,12,18.9V9.127a.376.376,0,0,0-.375-.376h-3a.376.376,0,0,1,0-.751h3A1.128,1.128,0,0,1,12.75,9.127V18.9a1.127,1.127,0,0,1-1.125,1.127"
+                            transform="translate(0 -2.024)" fill="#666" />
+                    </svg>UPLOAD
+                </button>
+                <button type="button" class="btn iconic-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <g id="download-attachments" transform="translate(18728.531 19325.5)">
+                            <g id="Group_11337" data-name="Group 11337" transform="translate(-18728.533 -19325.5)">
+                                <path id="Path_26641" data-name="Path 26641"
+                                    d="M88.874,22H73.124A1.126,1.126,0,0,1,72,20.875v-4.5A.375.375,0,0,1,72.374,16h5.25a.375.375,0,0,1,.375.375v.75a1.131,1.131,0,0,0,1.126,1.125h3.749A1.131,1.131,0,0,0,84,17.124v-.749A.375.375,0,0,1,84.374,16h5.25a.375.375,0,0,1,.375.375v4.5A1.126,1.126,0,0,1,88.874,22M72.749,16.75v4.125a.376.376,0,0,0,.375.375h15.75a.376.376,0,0,0,.375-.375V16.75h-4.5v.375A1.884,1.884,0,0,1,82.875,19H79.124a1.884,1.884,0,0,1-1.875-1.874V16.75Z"
+                                    transform="translate(-71.998 -4)" fill="#666" />
+                                <path id="Path_26642" data-name="Path 26642"
+                                    d="M72.374,15.25a.367.367,0,0,1-.189-.051.376.376,0,0,1-.135-.513l2.408-4.125a1.129,1.129,0,0,1,.97-.561h1.445a.375.375,0,0,1,0,.75H75.429a.374.374,0,0,0-.323.188L72.7,15.064a.375.375,0,0,1-.324.186"
+                                    transform="translate(-71.998 -2.5)" fill="#666" />
+                                <path id="Path_26643" data-name="Path 26643"
+                                    d="M93.874,15.25a.375.375,0,0,1-.324-.186l-2.408-4.125a.376.376,0,0,0-.324-.189H89.374a.375.375,0,0,1,0-.75h1.445a1.13,1.13,0,0,1,.972.562L94.2,14.686a.376.376,0,0,1-.135.513.367.367,0,0,1-.189.051"
+                                    transform="translate(-76.248 -2.5)" fill="#666" />
+                                <path id="Path_26644" data-name="Path 26644"
+                                    d="M83.874,9a.375.375,0,0,1-.375-.375V.375a.375.375,0,0,1,.75,0v8.25A.375.375,0,0,1,83.874,9"
+                                    transform="translate(-74.873)" fill="#666" />
+                                <path id="Path_26645" data-name="Path 26645"
+                                    d="M82.874,10.75a.377.377,0,0,1-.266-.109l-3-3a.375.375,0,1,1,.53-.531l2.735,2.735,2.734-2.735a.375.375,0,0,1,.53.531l-3,3a.374.374,0,0,1-.265.109"
+                                    transform="translate(-73.873 -1.75)" fill="#666" />
+                            </g>
+                        </g>
+                    </svg>DOWNLOAD
+                </button>
+            </div>
+
+            <button type="button" class="btn iconic-button">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.5"
+                    height="18.5" viewBox="0 0 18.5 18.5">
+                    <defs>
+                        <clipPath id="clip-path">
+                            <rect id="Rectangle_3887" data-name="Rectangle 3887" width="18.5" height="18.5"
+                                fill="#666" />
+                        </clipPath>
+                    </defs>
+                    <g id="Group_11496" data-name="Group 11496" clip-path="url(#clip-path)">
+                        <path id="Path_26780" data-name="Path 26780"
+                            d="M16.01,21.021a5.01,5.01,0,1,1,5.01-5.01,5.016,5.016,0,0,1-5.01,5.01m0-9.25a4.24,4.24,0,1,0,4.24,4.24,4.245,4.245,0,0,0-4.24-4.24"
+                            transform="translate(-2.521 -2.521)" fill="#666" />
+                        <path id="Path_26781" data-name="Path 26781"
+                            d="M17.385,19.4A.386.386,0,0,1,17,19.01V14.385a.385.385,0,1,1,.771,0V19.01a.386.386,0,0,1-.385.385"
+                            transform="translate(-3.896 -3.208)" fill="#666" />
+                        <path id="Path_26782" data-name="Path 26782"
+                            d="M19.01,17.771H14.385a.385.385,0,1,1,0-.771H19.01a.385.385,0,1,1,0,.771"
+                            transform="translate(-3.208 -3.896)" fill="#666" />
+                        <path id="Path_26783" data-name="Path 26783"
+                            d="M11.708,8.771H4.385a.385.385,0,1,1,0-.771h7.323a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -1.833)" fill="#666" />
+                        <path id="Path_26784" data-name="Path 26784"
+                            d="M9.01,11.771H4.385a.385.385,0,0,1,0-.771H9.01a.385.385,0,0,1,0,.771"
+                            transform="translate(-0.917 -2.521)" fill="#666" />
+                        <path id="Path_26785" data-name="Path 26785"
+                            d="M9.781,5.771h-5.4a.385.385,0,0,1,0-.771h5.4a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -1.146)" fill="#666" />
+                        <path id="Path_26786" data-name="Path 26786"
+                            d="M7.469,14.771H4.385a.385.385,0,0,1,0-.771H7.469a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -3.208)" fill="#666" />
+                        <path id="Path_26787" data-name="Path 26787"
+                            d="M7.469,17.771H4.385a.385.385,0,0,1,0-.771H7.469a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -3.896)" fill="#666" />
+                        <path id="Path_26788" data-name="Path 26788"
+                            d="M8.094,18.5H1.156A1.158,1.158,0,0,1,0,17.344V1.156A1.158,1.158,0,0,1,1.156,0H11.4a1.152,1.152,0,0,1,.818.338L15.078,3.2a1.152,1.152,0,0,1,.338.818V6.552a.385.385,0,1,1-.771,0V4.014a.382.382,0,0,0-.113-.272L11.676.883A.394.394,0,0,0,11.4.771H1.156a.386.386,0,0,0-.385.385V17.344a.386.386,0,0,0,.385.385H8.094a.385.385,0,0,1,0,.771"
+                            fill="#666" />
+                    </g>
+                </svg>ADD NOTES
+            </button>
+        </div>
+    </div>
+    <!-- wrapper Ends -->
+    <!-- Required scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-fixedcolumns/4.0.1/dataTables.fixedColumns.min.js"
+        integrity="sha512-IbXq1GVWD6Y/xZ0CcveVX+sYoKTJUs83AZNnBS1Rwg+ymrpTKiFPTPpqfWSUN0cRophBOKFpZsYk7BHnHzjaWA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.5/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.2.1/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="./js/vendor/dragScroll.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/page-specific-scripts/investigation-popup.js"></script>
+
+    <!-- <script src="./js/page-specific-scripts/popup.js"></script> -->
+</body>
+
+</html>

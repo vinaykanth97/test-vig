@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./images/favicon-med.ico">
+  <title>Fiserv Vigilance Lite | Investigation Queue</title>
+  <!-- Bootstrap Css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!-- Datatables css -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.5.5/css/colReorder.bootstrap5.min.css">
+  <!-- Custom Style Sheet -->
+  <link href="css/style.min.css" rel="stylesheet" />
+</head>
+
+<body class="reject-management-queue-detail detail-page">
+  <!-- Header -->
+  <header class="d-flex justify-content-between">
+    <div class="left-col d-flex">
+      <figure class="burger-icon" id="menu-toggle-2">
+        <svg id="menu-grey" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path id="Path_26255" data-name="Path 26255" d="M0,0H24V24H0Z" fill="none" />
+          <path id="Path_26256" data-name="Path 26256" d="M3,18H14V16H3Zm0-5H21V11H3ZM3,6V8H21V6Z" fill="#afafaf"
+            class="fill-ic" />
+        </svg>
+      </figure>
+      <figure class="logo">
+        <img src="./images/fiserv-logo.svg" alt="" />
+      </figure>
+      <h5 class="st-name">REJECT MANAGEMENT QUEUE</h5>
+    </div>
+    <div class="right-col d-flex">
+      <div class="badge-sec">
+        <span class="gold-badge">Bronze</span>
+      </div>
+      <div class="profile-notifier d-flex align-items-center dropdown">
+        <div class="dropdown-toggle d-flex align-items-center dropdown-angle" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false" role="menu">
+          <span>Arya Stark</span>
+          <figure class="profile-pic">
+            <img src="./images/user-profile.jpg" alt="user Profile" />
+          </figure>
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)">Profile</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)">Settings</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a class="dropdown-item" href="javascript:void(0)">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Header Ends -->
+  <!-- Wrapper Starts -->
+  <div id="wrapper" class="toggled-2">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+        <li>
+          <a href="./dashboard.html">
+            <div class="icon-spacing">
+              <span class="d-block text-center icon-fit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g id="dashboard-grey" transform="translate(-18 -78)">
+                    <g id="Group_8550" data-name="Group 8550">
+                      <g id="dashboard_black_24dp" transform="translate(18 78)">
+                        <path id="Path_26302" data-name="Path 26302" d="M0,0H24V24H0Z" fill="none" />
+                        <path id="Path_26303" data-name="Path 26303"
+                          d="M4,13h6a1,1,0,0,0,1-1V4a1,1,0,0,0-1-1H4A1,1,0,0,0,3,4v8A1,1,0,0,0,4,13Zm0,8h6a1,1,0,0,0,1-1V16a1,1,0,0,0-1-1H4a1,1,0,0,0-1,1v4A1,1,0,0,0,4,21Zm10,0h6a1,1,0,0,0,1-1V12a1,1,0,0,0-1-1H14a1,1,0,0,0-1,1v8A1,1,0,0,0,14,21ZM13,4V8a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V4a1,1,0,0,0-1-1H14A1,1,0,0,0,13,4Z"
+                          fill="#afafaf" class="fill-ic" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <span class="icon-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a href="./investigation-queue.html">
+            <div class="icon-spacing">
+              <span class="d-block text-center icon-fit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g id="investigation-grey" transform="translate(-18 -78)">
+                    <g id="find_in_page_black_24dp" transform="translate(18 78)">
+                      <path id="Path_26310" data-name="Path 26310" d="M0,0H24V24H0Z" fill="none" />
+                      <path id="Path_26311" data-name="Path 26311"
+                        d="M20,19.59V8.83a1.966,1.966,0,0,0-.59-1.41L14.58,2.59A1.966,1.966,0,0,0,13.17,2H6A2,2,0,0,0,4.01,4L4,20a2,2,0,0,0,1.99,2H18a1.982,1.982,0,0,0,1.19-.4l-4.43-4.43a4.979,4.979,0,0,1-3,.82,5,5,0,1,1,1.11-9.92,5,5,0,0,1,3.3,7.68ZM9,13a3,3,0,1,0,3-3A3,3,0,0,0,9,13Z"
+                        fill="#afafaf" class="fill-ic" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <span class="icon-text">Investigation Queue</span>
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li class="active">
+          <a href="./reject-management-queue.html">
+            <div class="icon-spacing">
+              <span class="d-block text-center icon-fit">
+                <svg id="reject-grey" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path id="Path_26481" data-name="Path 26481" d="M0,0H24V24H0Z" fill="none" />
+                  <path id="Path_26482" data-name="Path 26482"
+                    d="M4,10.5A1.5,1.5,0,1,0,5.5,12,1.5,1.5,0,0,0,4,10.5Zm0-6A1.5,1.5,0,1,0,5.5,6,1.5,1.5,0,0,0,4,4.5Zm0,12A1.5,1.5,0,1,0,5.5,18,1.5,1.5,0,0,0,4,16.5ZM7,19H21V17H7Zm0-6H21V11H7ZM7,5V7H21V5Z"
+                    fill="#afafaf" class="fill-ic" />
+                </svg>
+              </span>
+            </div>
+            <span class="icon-text">Reject Management Queue</span>
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a href="./global-search.html">
+            <div class="icon-spacing">
+              <span class="d-block text-center icon-fit">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path id="Path_26316" data-name="Path 26316" d="M0,0H24V24H0Z" fill="none"></path>
+                  <path id="Path_26317" data-name="Path 26317"
+                    d="M15.5,14h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,4.99L20.49,19Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z"
+                    fill="#afafaf" class="fill-ic"></path>
+                </svg>
+              </span>
+            </div>
+            <span class="icon-text">Global Search</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar Ends -->
+    <!-- Page Content starts-->
+    <div id="page-content-wrapper" class="pt-0">
+      <div class="container overflow-visible">
+        <div class="row">
+          <div class="col-md-12 sticky-informations">
+            <div class="blank-col">
+              <div class="iv-options d-flex justify-content-between">
+                <div class="left-opt d-flex contains-breadcrumb">
+                  <div class="dropdown queue-list hovered-dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      DBA NAME
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)">Item id</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0)">Mid</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li class="active">
+                        <a class="dropdown-item" href="javascript:void(0)"> DBA NAME</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="input-group d-flex position-relative">
+                    <input class="form-control border-end-0 border input-type-1 search-filter" type="search"
+                      placeholder="Search here…" id="example-search-input">
+                    <span class="input-group-append">
+                      <button class="btn border-start-0 border-bottom-0 search-type" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path data-name="Path 26316" d="M0,0H24V24H0Z" fill="none" />
+                          <path data-name="Path 26317"
+                            d="M15.5,14h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,4.99L20.49,19Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z"
+                            fill="#666" />
+                        </svg>
+                      </button>
+                    </span>
+                    <ul class="search-lists"></ul>
+                  </div>
+                  <ul class="breadcrumb">
+                    <li><a href="./dashboard.html">Home</a></li>
+                    <li><a href="javascript:void(0)">Reject Management Queue</a></li>
+                  </ul>
+                </div>
+                <div class="right-opt d-flex align-items-center">
+                  <label class="switch_button me-3">
+                    <input type="checkbox" id="switch_toggle">
+                    <span>COLLAPSE</span>
+                  </label>
+                  <button type="button" class="btn iconic-button print-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="0.98rem" viewBox="0 0 15 13.5">
+                      <path id="Path_25993" data-name="Path 25993"
+                        d="M14.75,6.75H4.25A2.247,2.247,0,0,0,2,9v4.5H5v3h9v-3h3V9A2.247,2.247,0,0,0,14.75,6.75ZM12.5,15h-6V11.25h6Zm2.25-5.25A.75.75,0,1,1,15.5,9,.752.752,0,0,1,14.75,9.75ZM14,3H5V6h9Z"
+                        transform="translate(-2 -3)" fill="#666" />
+                    </svg>
+                    PRINT
+                  </button>
+                </div>
+              </div>
+              <div class="detail_card_main mb-2">
+                <div class="d-flex detail_card mb-2 justify-content-between">
+                  <div class="detail_card_body detail_card_br">
+                    <p>MERCHANT NO.</p>
+                    <h4>530961200064640</h4>
+                  </div>
+                  <div class="detail_card_body detail_card_br">
+                    <p>DBA NAME</p>
+                    <h4>STAHL’S GOAT ROPING</h4>
+                  </div>
+                  <div class="detail_card_body detail_card_br">
+                    <p>DETECT DATE</p>
+                    <h4>12/01/2021</h4>
+                  </div>
+                  <div class="detail_card_body detail_card_br">
+                    <p>CHAIN ID</p>
+                    <h4>12848822</h4>
+                  </div>
+                  <div class="detail_card_body detail_card_br">
+                    <p># OUTLETS</p>
+                    <h4>50</h4>
+                  </div>
+                  <div class="detail_card_body detail_card_br">
+                    <p>KEYED DATE</p>
+                    <h4>12/01/2021</h4>
+                  </div>
+                  <div class="detail_card_body detail_card_br">
+                    <p>PR BOOL</p>
+                    <h4>YES</h4>
+                  </div>
+                  <div class="detail_card_body detail_card_br">
+                    <p>SIC</p>
+                    <h4>YES</h4>
+                  </div>
+                  <div class="detail_card_body">
+                    <p>PORTFOLIO</p>
+                    <h4>KEY BANK DIGITAL</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex detail_card_main reject-extra-details">
+                <div class="detail_card detail_card_50 me-2 position-relative overflow-hidden">
+                  <div class="reject_body detail_card_bb detail_card_100">
+                    <h5>ACCOUNT FLAGS</h5>
+                  </div>
+                  <div class="d-flex h_100">
+                    <div class="detail_card_body detail_card_br detail_card_33">
+                      <p>ALERT TRIGGER</p>
+                      <h4>ACTIVE</h4>
+                    </div>
+                    <div class="detail_card_body detail_card_br detail_card_33">
+                      <p>ALERT REASON</p>
+                      <h4>NOTED</h4>
+                    </div>
+                    <div class="detail_card_body detail_card_33">
+                      <p>ALERT STATUS</p>
+                      <h4>HIGH</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail_card detail_card_50">
+                  <div class="reject_body detail_card_bb detail_card_100">
+                    <h5>LIMITS</h5>
+                  </div>
+                  <div class="d-flex reject_card">
+                    <div class="detail_card_body detail_card_bb detail_card_br detail_card_25">
+                      <p>DAILY FE</p>
+                    </div>
+                    <div class="detail_card_body detail_card_bb detail_card_br detail_card_30">
+                      <p>FE INDICATOR</p>
+                    </div>
+                    <div class="detail_card_body detail_card_bb detail_card_br detail_card_45">
+                      <p>PTS SALE</p>
+                    </div>
+                  </div>
+                  <div class="d-flex reject_card">
+                    <div class="detail_card_body detail_card_bb detail_card_br detail_card_25">
+                      <p>30 DAY FE</p>
+                    </div>
+                    <div class="detail_card_body detail_card_bb detail_card_br detail_card_30">
+                      <p>PTS REFUND</p>
+                    </div>
+                    <div class="detail_card_body detail_card_bb detail_card_br detail_card_45">
+                      <p>PTS CUMULATIVE REFUND</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Reject Management Tab Starts -->
+            <ul class="d-flex detail-tab">
+              <li>
+                <a class="active" href="javascript:void(0)" data-id="merchant-profile">
+                  <svg id="supervisor_account_black_24dp" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path id="Path_406" data-name="Path 406" d="M0,0H24V24H0Z" fill="none" />
+                    <path id="Path_407" data-name="Path 407"
+                      d="M16.5,12A2.5,2.5,0,1,0,14,9.5,2.492,2.492,0,0,0,16.5,12ZM9,11A3,3,0,1,0,6,8,2.987,2.987,0,0,0,9,11Zm7.5,3c-1.83,0-5.5.92-5.5,2.75V18a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V16.75C22,14.92,18.33,14,16.5,14ZM9,13c-2.33,0-7,1.17-7,3.5V18a1,1,0,0,0,1,1H9V16.75a3.941,3.941,0,0,1,2.37-3.47A12.283,12.283,0,0,0,9,13Z"
+                      fill="#666" />
+                  </svg>
+                  MERCHANT PROFILE
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" data-id="transaction" class="reject_trans_tab">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="Group_9646" data-name="Group 9646" transform="translate(0.5 0.5)">
+                      <g id="Group_9647" data-name="Group 9647">
+                        <ellipse id="Ellipse_941" data-name="Ellipse 941" cx="5" cy="1" rx="5" ry="1"
+                          transform="translate(0 9)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26483" data-name="Path 26483" d="M10.5,10.5v3c0,.553-2.238,1-5,1s-5-.447-5-1v-3"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26484" data-name="Path 26484" d="M10.5,13.5v3c0,.553-2.238,1-5,1s-5-.447-5-1v-3"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26485" data-name="Path 26485" d="M10.5,16.5v3c0,.553-2.238,1-5,1s-5-.447-5-1v-3"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26486" data-name="Path 26486" d="M10.5,19.5v3c0,.553-2.238,1-5,1s-5-.447-5-1v-3"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26487" data-name="Path 26487"
+                          d="M.5,7.5v-6a1,1,0,0,1,1-1h21a1,1,0,0,1,1,1v12a1,1,0,0,1-1,1H13"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26488" data-name="Path 26488" d="M9,7.5a3,3,0,1,1,4,2.829"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26489" data-name="Path 26489" d="M5,4.75A.25.25,0,1,1,4.75,5,.25.25,0,0,1,5,4.75"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26490" data-name="Path 26490"
+                          d="M19,9.75a.25.25,0,1,1-.25.25A.25.25,0,0,1,19,9.75" transform="translate(-0.5 -0.5)"
+                          fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                        <path id="Path_26491" data-name="Path 26491"
+                          d="M2.5,7.5V3A.5.5,0,0,1,3,2.5H21a.5.5,0,0,1,.5.5v9a.5.5,0,0,1-.5.5H13"
+                          transform="translate(-0.5 -0.5)" fill="none" stroke="#666" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1" />
+                      </g>
+                    </g>
+                  </svg>
+                  TRANSACTION
+                </a>
+              </li>
+            </ul>
+            <!-- Reject Management Tab Starts -->
+          </div>
+          <div class="col-md-12 mb-4">
+            <!-- Merchant Profile Contents Starts -->
+            <div class="detail_tab_content tab-details-inner active position-relative" id="merchant-profile">
+              <div class="merchant_tab_cnt scrollspy_cnt">
+                <div class="content-pos">
+                  <div class="scrollspy_head_cnt">
+                    <p>MERCHANT SUMMARY</p>
+                  </div>
+                  <div class="merchant_summary_cnt scrollspy_pad d-flex">
+                    <div class="merchant_outlet me-4">
+                      <div class="d-flex">
+                        <table class="detail_table border_table dba_info me-2">
+                          <thead>
+                            <tr>
+                              <th colspan="3">DBA INFO</th>
+                            </tr>
+
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>DBA INFO</td>
+                              <td>:</td>
+                              <td>JIM’S PIZZA - CALUMET</td>
+                            </tr>
+                            <tr>
+                              <td>Merchant Address</td>
+                              <td>:</td>
+                              <td>553 kop ln king of prussia, pa 23222</td>
+                            </tr>
+                            <tr>
+                              <td>Merchant Email</td>
+                              <td>:</td>
+                              <td>tim@stahlgoats.com</td>
+                            </tr>
+                            <tr>
+                              <td>DBA Phone</td>
+                              <td>:</td>
+                              <td>555-222-2222</td>
+                            </tr>
+                            <tr>
+                              <td>DBA Fax</td>
+                              <td>:</td>
+                              <td>555-222-2222</td>
+                            </tr>
+                            <tr>
+                              <td>Contact</td>
+                              <td>:</td>
+                              <td>Tim Stahl - Owner</td>
+                            </tr>
+                            <tr>
+                              <td>Merchant URL</td>
+                              <td>:</td>
+                              <td>stahlgoats.com</td>
+                            </tr>
+                            <tr>
+                              <td>Legal Name</td>
+                              <td>:</td>
+                              <td>LL ENTERPRISES</td>
+                            </tr>
+                            <tr>
+                              <td>Contact Title</td>
+                              <td>:</td>
+                              <td>234234556</td>
+                            </tr>
+                            <tr>
+                              <td>Attn Name</td>
+                              <td>:</td>
+                              <td>KEY BANK</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="dba_info">
+                          <table class="detail_table border_table me-2">
+                            <thead>
+                              <tr>
+                                <th colspan="3">MISC INFO</th>
+                              </tr>
+
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Tax ID</td>
+                                <td>:</td>
+                                <td>852147963</td>
+                              </tr>
+                              <tr>
+                                <td>Relationship Manager</td>
+                                <td>:</td>
+                                <td>Manager</td>
+                              </tr>
+                              <tr>
+                                <td>MCC</td>
+                                <td>:</td>
+                                <td>Sole Prop</td>
+                              </tr>
+                              <tr>
+                                <td>SIC</td>
+                                <td>:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td>TMF Match</td>
+                                <td>:</td>
+                                <td>No</td>
+                              </tr>
+                              <tr>
+                                <td>TMF Retro Match</td>
+                                <td>:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td>GNF Match</td>
+                                <td>:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td>Pay Code</td>
+                                <td>:</td>
+                                <td>678609</td>
+                              </tr>
+                              <tr>
+                                <td>Pay Cycle</td>
+                                <td>:</td>
+                                <td>Yearly</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="merchant_outlet">
+                      <div class="d-flex">
+                        <table class="detail_table border_table dba_info me-2">
+                          <thead>
+                            <tr>
+                              <th colspan="3">PRINCIPAL ONE INFO</th>
+                            </tr>
+
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Name</td>
+                              <td>:</td>
+                              <td>Cliff Thompson</td>
+                            </tr>
+                            <tr>
+                              <td>Date Of Birth</td>
+                              <td>:</td>
+                              <td>11/01/1980</td>
+                            </tr>
+                            <tr>
+                              <td>Ownership %</td>
+                              <td>:</td>
+                              <td>100%</td>
+                            </tr>
+                            <tr>
+                              <td>SSN</td>
+                              <td>:</td>
+                              <td>166-23-2322</td>
+                            </tr>
+                            <tr>
+                              <td>Mobile PH</td>
+                              <td>:</td>
+                              <td>555-222-2222</td>
+                            </tr>
+                            <tr>
+                              <td>Pay Code</td>
+                              <td>:</td>
+                              <td>553 KOP LN KING OF PRUSSIA, PA 23222</td>
+                            </tr>
+                            <tr>
+                              <td>Phone</td>
+                              <td>:</td>
+                              <td>555-222-2222</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="dba_info">
+                          <table class="detail_table border_table me-2">
+                            <thead>
+                              <tr>
+                                <th colspan="3">BILLING INFO</th>
+                              </tr>
+
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Name</td>
+                                <td>:</td>
+                                <td>STAHL’S GOAT ROPING</td>
+                              </tr>
+                              <tr>
+                                <td>Address</td>
+                                <td>:</td>
+                                <td>553 kop ln king of prussia, pa 23222</td>
+                              </tr>
+                              <tr>
+                                <td>Mobile</td>
+                                <td>:</td>
+                                <td>522-6232-6667</td>
+                              </tr>
+                              <tr>
+                                <td>Fax</td>
+                                <td>:</td>
+                                <td>622-422-2456</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-pos">
+                  <div class="scrollspy_head_cnt">
+                    <p>CHART</p>
+                  </div>
+                  <div class="scrollspy_pad">
+                    <div class="reject_chart">
+                      <div class="activity-card-header d-flex align-items-center">
+                        <h4 class="mb-0 flex-grow-1">Sum of PTS</h4>
+                        <div class="left-options d-flex align-items-center">
+                          <div class="d-flex align-items-center">
+                            <div class="reject_chart_legend orange_legend"></div>
+                            <p>Sales</p>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <div class="reject_chart_legend blue_legend"></div>
+                            <p>Refund</p>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <div class="reject_chart_legend yellow_legend"></div>
+                            <p>Chargeback</p>
+                          </div>
+                          <div class="d-flex align-items-center me-4">
+                            <div class="reject_chart_legend black_legend "></div>
+                            <p>AT</p>
+                          </div>
+                          <div class="dropdown month-classify" data-trigger="133ITEM12">
+                            <button class="btn dropdown-toggle dropdown-angle" type="button" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              Last 12 months
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="javascript:void(0)" data-id="6months">Past 6
+                                  months</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li class="active">
+                                <a class="dropdown-item" href="javascript:void(0)" data-id="12months">Past 12
+                                  months</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="reject_detail_chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Merchant Profile Contents Ends -->
+
+            <!-- Transaction Contents Starts -->
+            <div class="detail_tab_content tab-details-inner position-relative" id="transaction">
+              <nav class="navbar navbar-light spy-detect-content bg-light px-3 scrollspy_tab">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="javascript:void(0)" data-id="trans_details">TRANSAC. DETAILS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" data-id="trans_details_pts">TRANSAC. DETAILS PTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" data-id="funding_exclusion">FUNDING EXCLUSION</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" data-id="trans_alert">MODEL DRIVEN, REAL TIME & RULE
+                      BASED ALERTING</a>
+                  </li>
+                </ul>
+                <div class="search_input">
+                  <input type="text" id="searchbox1" class="searchbox" required="" placeholder="SEARCH INTERNAL DATA">
+                  <!-- <label for="searchbox1"></label> -->
+                  <span></span>
+                  <svg id="search-grey" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path data-name="Path 26316" d="M0,0H24V24H0Z" fill="none" />
+                    <path data-name="Path 26317"
+                      d="M15.5,14h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,4.99L20.49,19Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z"
+                      fill="#afafaf" />
+                  </svg>
+                </div>
+              </nav>
+              <div class="scrollspy_cnt financial_cnt ">
+                <div id="trans_details" class="content-pos">
+                  <div class="scrollspy_head_cnt d-flex align-items-center">
+                    <p class="flex-grow-1">TRANSACTION DETAILS</p>
+                    <div class="d-flex trans_pad">
+                      <div class="dropdown ms-auto popup_dropdown me-2">
+                        <button class="btn dropdown-toggle dropdown-angle" type="button" data-id="trans_details">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <rect data-name="Rectangle 3490" width="16" height="16" fill="none" />
+                            <path data-name="Path 26517"
+                              d="M5.553,14.667H2V4H5.553Zm9.78,0V4H11.78V14.667Zm-4.887,0V4H6.887V14.667Z"
+                              transform="translate(-0.667 -1.333)" fill="#666" />
+                          </svg>
+                          Customise Columns
+                        </button>
+                        <div class="popup_dropdown_menu">
+                          <div class="d-flex dropdown_pad_head popup_bb">
+                            <div class="check label_pr check_minwdh">
+                              <input id="td-selectall" type="checkbox" checked="" class="select_all">
+                              <label for="td-selectall">SELECT ALL</label>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-wrap">
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="td-card" type="checkbox" checked="" class="custom_column">
+                                <label for="td-card">Card</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="td-transaction-date" type="checkbox" class="custom_column" checked="">
+                                <label for="td-transaction-date">Transaction Date</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="td-transaction-amount" type="checkbox" checked="" class="custom_column">
+                                <label for="td-transaction-amount">Transaction Amount</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="td-pos" type="checkbox" class="custom_column" checked="">
+                                <label for="td-pos">POS</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="td-tran-id" type="checkbox" checked="" class="custom_column">
+                                <label for="td-tran-id">TRAN ID</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="td-auth-amount" type="checkbox" class="custom_column" checked=""
+                                  data-id="forced-sales">
+                                <label for="td-auth-amount">Auth Amount</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="td-authorization-response" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="td-authorization-response">AUTHORIZATION RESPONSE Code</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="td-issuer-name" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="td-issuer-name">ISSUER Name</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trans-detail-pagination pagination-provision d-flex align-items-center"></div>
+                    </div>
+                  </div>
+                  <div class="trans_details_cnt scrollspy_pad">
+                    <div class="no-data d-none">
+                      <div class="no-data-header">
+                        NO DATA IS SELECTED TO SHOW
+                      </div>
+                      <h4 class="text-center">Kindly select few columns to preview this table</h4>
+                    </div>
+                    <table class="detail_table transaction-datables mb-0 transaction-detail-table">
+                      <thead>
+                        <tr>
+                          <th>CARD #</th>
+                          <th>TRANSACTION <br>DATE</th>
+                          <th>TRANSACTION <br>AMOUNT</th>
+                          <th>POS</th>
+                          <th>TRAN ID</th>
+                          <th>AUTH <br>AMOUNT</th>
+                          <th>AUTHORIZATION <br>RESPONSE CODE</th>
+                          <th>ISSUER <br>NAME</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>205-397-9874</td>
+                          <td>05/10/2022</td>
+                          <td>$5000</td>
+                          <td>lorem</td>
+                          <td>520456869</td>
+                          <td>$8000</td>
+                          <td>258974</td>
+                          <td>STAHL’S</td>
+                        </tr>
+                        <tr>
+                          <td>658-856-2025</td>
+                          <td>12/05/2022</td>
+                          <td>$52,500</td>
+                          <td>lorem</td>
+                          <td>654789520</td>
+                          <td>$65,478</td>
+                          <td>568450</td>
+                          <td>JOHN</td>
+                        </tr>
+                        <tr>
+                          <td>589-562-1235</td>
+                          <td>08/03/2022</td>
+                          <td>$74,620</td>
+                          <td>lorem</td>
+                          <td>805247896</td>
+                          <td>$1,00,255</td>
+                          <td>368743</td>
+                          <td>JOE</td>
+                        </tr>
+                        <tr>
+                          <td>205-397-9874</td>
+                          <td>05/10/2022</td>
+                          <td>$5000</td>
+                          <td>lorem</td>
+                          <td>520456869</td>
+                          <td>$8000</td>
+                          <td>258974</td>
+                          <td>DEO</td>
+                        </tr>
+                        <tr>
+                          <td>658-856-2025</td>
+                          <td>12/05/2022</td>
+                          <td>$56,500</td>
+                          <td>lorem</td>
+                          <td>654789520</td>
+                          <td>$65,478</td>
+                          <td>568450</td>
+                          <td>JANE</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div id="trans_details_pts" class="content-pos">
+                  <div class="scrollspy_head_cnt d-flex align-items-center">
+                    <p class="flex-grow-1">TRANSACTION DETAILS PTS</p>
+                    <div class="d-flex trans_pad">
+                      <div class="dropdown ms-auto popup_dropdown me-2">
+                        <button class="btn dropdown-toggle dropdown-angle" type="button" data-id="trans_details_pts">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <rect data-name="Rectangle 3490" width="16" height="16" fill="none" />
+                            <path data-name="Path 26517"
+                              d="M5.553,14.667H2V4H5.553Zm9.78,0V4H11.78V14.667Zm-4.887,0V4H6.887V14.667Z"
+                              transform="translate(-0.667 -1.333)" fill="#666" />
+                          </svg>
+                          Customise Columns
+                        </button>
+                        <div class="popup_dropdown_menu">
+                          <div class="d-flex dropdown_pad_head popup_bb">
+                            <div class="check label_pr check_minwdh">
+                              <input id="pts-selectall" type="checkbox" checked="" class="select_all">
+                              <label for="pts-selectall">SELECT ALL</label>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-wrap">
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="event_time" type="checkbox" checked="" class="custom_column">
+                                <label for="event_time">EVENT TIME</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="priority" type="checkbox" class="custom_column" checked="">
+                                <label for="priority">PRIORITY</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="trans_amt" type="checkbox" checked="" class="custom_column">
+                                <label for="trans_amt">Transaction Amount</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="trans_type" type="checkbox" class="custom_column" checked="">
+                                <label for="trans_type">TRANSACTION TYPE</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="days_pended" type="checkbox" checked="" class="custom_column">
+                                <label for="days_pended">DAYS PENDED</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="pts_card" type="checkbox" class="custom_column" checked=""
+                                  data-id="forced-sales">
+                                <label for="pts_card">CARD</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="pts_hold_reason" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="pts_hold_reason">PTS HOLD REASON</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="offsetting_sale" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="offsetting_sale">OFFSETING SALE</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="auto_process" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="auto_process">AUTO PROCESS</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="pts_card_type" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="pts_card_type">CARD TYPE</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="issuer" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="issuer">ISSUER</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="initial_decision" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="initial_decision">INITIAL DECISION</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="initial_decision_time" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="initial_decision_time">INITIAL DECISION TIME</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="manager_decision" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="manager_decision">MANAGER DECISION</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trans-detail-pts-pagination pagination-provision d-flex align-items-center"></div>
+                    </div>
+                  </div>
+                  <div class="trans_details_cnt scrollspy_pad">
+                    <div class="no-data d-none">
+                      <div class="no-data-header">
+                        NO DATA IS SELECTED TO SHOW
+                      </div>
+                      <h4 class="text-center">Kindly select few columns to preview this table</h4>
+                    </div>
+
+                    <div class="overflow_auto">
+                      <table class="detail_table trans_details_table transaction-datables mb-0 trans-pts-detail">
+                        <thead>
+                          <tr>
+                            <th>EVENT TIME</th>
+                            <th>PRIORITY</th>
+                            <th>TRANSACTION <br>AMOUNT</th>
+                            <th>TRANSACTION <br>TYPE</th>
+                            <th>DAYS PENDED</th>
+                            <th>CARD #</th>
+                            <th>PTS HOLD <br>REASON</th>
+                            <th>OFFSETING SALE</th>
+                            <th>AUTO PROCESS</th>
+                            <th>CARD TYPE</th>
+                            <th>ISSUER</th>
+                            <th>INITIAL <br>DECISION</th>
+                            <th>INITIAL <br>DECISION TIME</th>
+                            <th>MANAGER <br>DECISION</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>09:30</td>
+                            <td>High</td>
+                            <td>$5000</td>
+                            <td>Cash</td>
+                            <td>05/10/2022</td>
+                            <td>205-397-9874</td>
+                            <td>Lorem ipsum</td>
+                            <td>$5000</td>
+                            <td>Process</td>
+                            <td>Govt Card</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>09:30</td>
+                            <td>Manager</td>
+                          </tr>
+                          <tr>
+                            <td>10:00</td>
+                            <td>Medium</td>
+                            <td>$52,500</td>
+                            <td>Cash</td>
+                            <td>12/05/2022</td>
+                            <td>658-856-2025</td>
+                            <td>Lorem ipsum</td>
+                            <td>$52,500</td>
+                            <td>Process</td>
+                            <td>Corp Card</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>10:00</td>
+                            <td>Manager</td>
+                          </tr>
+                          <tr>
+                            <td>12:00</td>
+                            <td>High</td>
+                            <td>$74,620</td>
+                            <td>Cash</td>
+                            <td>08/03/2022</td>
+                            <td>589-562-1235</td>
+                            <td>Lorem ipsum</td>
+                            <td>$74,620</td>
+                            <td>Process</td>
+                            <td>Foreign Card</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>12:00</td>
+                            <td>Manager</td>
+                          </tr>
+                          <tr>
+                            <td>13:50</td>
+                            <td>Low</td>
+                            <td>$5000</td>
+                            <td>Cash</td>
+                            <td>05/10/2022</td>
+                            <td>205-397-9874</td>
+                            <td>Lorem ipsum</td>
+                            <td>$5000</td>
+                            <td>Process</td>
+                            <td>Corp Card</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>13:50</td>
+                            <td>Manager</td>
+                          </tr>
+                          <tr>
+                            <td>16:50</td>
+                            <td>Medium</td>
+                            <td>$56,500</td>
+                            <td>Cash</td>
+                            <td>12/05/2022</td>
+                            <td>658-856-2025</td>
+                            <td>Lorem ipsum</td>
+                            <td>$56,500</td>
+                            <td>Process</td>
+                            <td>Govt Card</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>16:50</td>
+                            <td>Manager</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div id="funding_exclusion" class="content-pos">
+                  <div class="scrollspy_head_cnt d-flex align-items-center">
+                    <p class="flex-grow-1">FUNDING EXCLUSION DETAILS</p>
+                    <div class="d-flex trans_pad">
+                      <div class="dropdown ms-auto popup_dropdown me-2">
+                        <button class="btn dropdown-toggle dropdown-angle" type="button" data-id="funding_exclusion">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <rect data-name="Rectangle 3490" width="16" height="16" fill="none" />
+                            <path data-name="Path 26517"
+                              d="M5.553,14.667H2V4H5.553Zm9.78,0V4H11.78V14.667Zm-4.887,0V4H6.887V14.667Z"
+                              transform="translate(-0.667 -1.333)" fill="#666" />
+                          </svg>
+                          Customise Columns
+                        </button>
+                        <div class="popup_dropdown_menu">
+                          <div class="d-flex dropdown_pad_head popup_bb">
+                            <div class="check label_pr check_minwdh">
+                              <input id="funding_select_all" type="checkbox" checked="" class="select_all">
+                              <label for="funding_select_all">SELECT ALL</label>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-wrap">
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="fund_event_time" type="checkbox" checked="" class="custom_column">
+                                <label for="fund_event_time">EVENT TIME</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="fund_priority" type="checkbox" class="custom_column" checked="">
+                                <label for="fund_priority">PRIORITY</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="fund_amt_held" type="checkbox" checked="" class="custom_column">
+                                <label for="fund_amt_held">AMOUNT HELD</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="fund_days_pended" type="checkbox" class="custom_column" checked="">
+                                <label for="fund_days_pended">DAYS PENDED</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="fund_daily_limit" type="checkbox" checked="" class="custom_column">
+                                <label for="fund_daily_limit">DAILY FE LIMIT</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="30_days_limit" type="checkbox" class="custom_column" checked=""
+                                  data-id="forced-sales">
+                                <label for="30_days_limit">30 DAYS FE LIMIT</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="fund_initial_decision" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="fund_initial_decision">INITIAL DECISION</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="fund_initial_decision_time" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="fund_initial_decision_time">INITIAL DECISION TIME</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="fund_manager_decision" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="fund_manager_decision">MANAGER DECISION</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="fund_update_daily_limit" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="fund_update_daily_limit">UPDATED DAILY FE LIMIT</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="fund_update_30days_limit" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="fund_update_30days_limit">UPDATED 30 DAYS FE LIMIT</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="funding-exclusion-pagination pagination-provision d-flex align-items-center"></div>
+                    </div>
+                  </div>
+                  <div class="trans_details_cnt scrollspy_pad">
+                    <div class="no-data d-none">
+                      <div class="no-data-header">
+                        NO DATA IS SELECTED TO SHOW
+                      </div>
+                      <h4 class="text-center">Kindly select few columns to preview this table</h4>
+                    </div>
+                    <div class="overflow_auto funding_exclusion_details">
+                      <table class="detail_table trans_fund transaction-datables mb-0 funding_exclusion_table">
+                        <thead>
+                          <tr>
+                            <th>EVENT <br>TIME</th>
+                            <th>PRIORITY</th>
+                            <th>AMOUNT <br>HELD</th>
+                            <th>DAYS <br>PENDED</th>
+                            <th>DAILY <br>FE LIMIT</th>
+                            <th>30 DAYS <br>FE LIMIT</th>
+                            <th>INITIAL DECISION</th>
+                            <th>INITIAL <br>DECISION TIME</th>
+                            <th>MANAGER <br>DECISION</th>
+                            <th>UPDATED DAILY <br>FE LIMIT</th>
+                            <th>UPDATED <br>30 DAYS FE LIMIT</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>09:30</td>
+                            <td>High</td>
+                            <td>$5000</td>
+                            <td>10 Days</td>
+                            <td>$2000</td>
+                            <td>$2000</td>
+                            <td>Lorem ipsum</td>
+                            <td>09:30</td>
+                            <td>Manager</td>
+                            <td>$2000</td>
+                            <td>$2000</td>
+                          </tr>
+                          <tr>
+                            <td>10:00</td>
+                            <td>Medium</td>
+                            <td>$52,500</td>
+                            <td>05 Days</td>
+                            <td>$5286</td>
+                            <td>$5286</td>
+                            <td>Lorem ipsum</td>
+                            <td>10:00</td>
+                            <td>Manager</td>
+                            <td>$5286</td>
+                            <td>$5286</td>
+                          </tr>
+                          <tr>
+                            <td>12:00</td>
+                            <td>High</td>
+                            <td>$74,620</td>
+                            <td>12 Days</td>
+                            <td>$6325</td>
+                            <td>$6325</td>
+                            <td>Lorem ipsum</td>
+                            <td>12:00</td>
+                            <td>Manager</td>
+                            <td>$6325</td>
+                            <td>$6325</td>
+                          </tr>
+                          <tr>
+                            <td>13:50</td>
+                            <td>Low</td>
+                            <td>$5000</td>
+                            <td>15 Days</td>
+                            <td>$3578</td>
+                            <td>$3578</td>
+                            <td>Lorem ipsum</td>
+                            <td>13:50</td>
+                            <td>Manager</td>
+                            <td>$3578</td>
+                            <td>$3578</td>
+                          </tr>
+                          <tr>
+                            <td>16:50</td>
+                            <td>Medium</td>
+                            <td>$56,500</td>
+                            <td>25 Days</td>
+                            <td>$9512</td>
+                            <td>$9512</td>
+                            <td>Lorem ipsum</td>
+                            <td>16:50</td>
+                            <td>Manager</td>
+                            <td>$9512</td>
+                            <td>$9512</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div id="trans_alert" class="content-pos">
+                  <div class="scrollspy_head_cnt d-flex align-items-center">
+                    <p class="flex-grow-1">MODEL DRIVEN, REAL TIME AND RULE BASED ALERTING</p>
+                    <div class="d-flex trans_pad">
+                      <div class="dropdown ms-auto popup_dropdown me-2">
+                        <button class="btn dropdown-toggle dropdown-angle" type="button" data-id="trans_alert">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <rect data-name="Rectangle 3490" width="16" height="16" fill="none" />
+                            <path data-name="Path 26517"
+                              d="M5.553,14.667H2V4H5.553Zm9.78,0V4H11.78V14.667Zm-4.887,0V4H6.887V14.667Z"
+                              transform="translate(-0.667 -1.333)" fill="#666" />
+                          </svg>
+                          Customise Columns
+                        </button>
+                        <div class="popup_dropdown_menu">
+                          <div class="d-flex dropdown_pad_head popup_bb">
+                            <div class="check label_pr check_minwdh">
+                              <input id="alert_selectall" type="checkbox" checked="" class="select_all">
+                              <label for="alert_selectall">SELECT ALL</label>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-wrap">
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="alert_event_time" type="checkbox" checked="" class="custom_column">
+                                <label for="alert_event_time">EVENT TIME</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check flex_50">
+                                <input id="alert_priority" type="checkbox" class="custom_column" checked="">
+                                <label for="alert_priority">PRIORITY</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="alert_type" type="checkbox" checked="" class="custom_column">
+                                <label for="alert_type">ALERT TYPE</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="alert_rule_category" type="checkbox" checked="" class="custom_column">
+                                <label for="alert_rule_category">RULE CATEGORY</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check flex_50">
+                                <input id="alert_daily_limit" type="checkbox" class="custom_column" checked="">
+                                <label for="alert_daily_limit">DAILY FE LIMIT</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="alert_30days_limit" type="checkbox" checked="" class="custom_column">
+                                <label for="alert_30days_limit">30 DAYS FE LIMIT</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check flex_50">
+                                <input id="alert_process_start" type="checkbox" class="custom_column" checked=""
+                                  data-id="forced-sales">
+                                <label for="alert_process_start">PROCESSING STATS (30 DAY)</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="alert_initial_decision" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="alert_initial_decision">INITIAL DECISION</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="alert_initial_decision_time" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="alert_initial_decision_time">INITIAL DECISION TIME</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="alert_manager_decision" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="alert_manager_decision">MANAGER DECISION</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad popup_br">
+                              <div class="check">
+                                <input id="alert_update_daily_limit" type="checkbox" checked="" class="custom_column"
+                                  data-id="entry-method">
+                                <label for="alert_update_daily_limit">UPDATED DAILY FE LIMIT</label>
+                              </div>
+                            </div>
+                            <div class="check_flex_adjust popup_bb dropdown_pad">
+                              <div class="check">
+                                <input id="alert_update_30days_limit" type="checkbox" checked="" class="custom_column "
+                                  data-id="cb-reversal">
+                                <label for="alert_update_30days_limit">UPDATED 30 DAYS FE LIMIT</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trans-alert-pagination pagination-provision d-flex align-items-center"></div>
+                    </div>
+                  </div>
+                  <div class="trans_details_cnt scrollspy_pad">
+                    <div class="no-data d-none">
+                      <div class="no-data-header">
+                        NO DATA IS SELECTED TO SHOW
+                      </div>
+                      <h4 class="text-center">Kindly select few columns to preview this table</h4>
+                    </div>
+                    <div class="overflow_auto">
+                      <table class="detail_table trans_alert_table transaction-datables mb-0 trans-alert-table">
+                        <thead>
+                          <tr>
+                            <th>EVENT TIME</th>
+                            <th>PRIORITY</th>
+                            <th>ALERT TYPE</th>
+                            <th>RULE CATEGORY</th>
+                            <th>DAILY <br>FE LIMIT</th>
+                            <th>30 DAYS <br>FE LIMIT</th>
+                            <th>PROCESSING <br>STATS (30 DAY)</th>
+                            <th>INITIAL DECISION</th>
+                            <th>INITIAL <br>DECISION TIME</th>
+                            <th>MANAGER <br>DECISION</th>
+                            <th>UPDATED DAILY <br>FE LIMIT</th>
+                            <th>UPDATED <br>30 DAYS FE LIMIT</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>09:30</td>
+                            <td>Model</td>
+                            <td>Model</td>
+                            <td>Lorem ipsum</td>
+                            <td>$2000</td>
+                            <td>$2000</td>
+                            <td>Sales</td>
+                            <td>Lorem ipsum</td>
+                            <td>09:30</td>
+                            <td>Manager</td>
+                            <td>$2000</td>
+                            <td>$2000</td>
+                          </tr>
+                          <tr>
+                            <td>10:00</td>
+                            <td>Rule</td>
+                            <td>Rule</td>
+                            <td>Lorem ipsum</td>
+                            <td>$5286</td>
+                            <td>$5286</td>
+                            <td>Refunds</td>
+                            <td>Lorem ipsum</td>
+                            <td>10:00</td>
+                            <td>Manager</td>
+                            <td>$5286</td>
+                            <td>$5286</td>
+                          </tr>
+                          <tr>
+                            <td>12:00</td>
+                            <td>Real Time</td>
+                            <td>Real Time</td>
+                            <td>Lorem ipsum</td>
+                            <td>$6325</td>
+                            <td>$6325</td>
+                            <td>Chbks</td>
+                            <td>Lorem ipsum</td>
+                            <td>12:00</td>
+                            <td>Manager</td>
+                            <td>$6325</td>
+                            <td>$6325</td>
+                          </tr>
+                          <tr>
+                            <td>13:50</td>
+                            <td>Rule</td>
+                            <td>Rule</td>
+                            <td>Lorem ipsum</td>
+                            <td>$3578</td>
+                            <td>$3578</td>
+                            <td>Declines</td>
+                            <td>Lorem ipsum</td>
+                            <td>13:50</td>
+                            <td>Manager</td>
+                            <td>$3578</td>
+                            <td>$3578</td>
+                          </tr>
+                          <tr>
+                            <td>16:50</td>
+                            <td>Real Time</td>
+                            <td>Real Time</td>
+                            <td>Lorem ipsum</td>
+                            <td>$9512</td>
+                            <td>$9512</td>
+                            <td>Forced Aut</td>
+                            <td>Lorem ipsum</td>
+                            <td>13:50</td>
+                            <td>Manager</td>
+                            <td>$9512</td>
+                            <td>$9512</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Transaction Contents Ends -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Page Content Ends -->
+  <!-- wrapper Ends -->
+  <!-- Required scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-fixedcolumns/4.0.1/dataTables.fixedColumns.min.js"
+    integrity="sha512-IbXq1GVWD6Y/xZ0CcveVX+sYoKTJUs83AZNnBS1Rwg+ymrpTKiFPTPpqfWSUN0cRophBOKFpZsYk7BHnHzjaWA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.datatables.net/colreorder/1.5.5/js/dataTables.colReorder.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.17.1/apexcharts.min.js"></script>
+
+  <script src="./js/vendor/dragScroll.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/page-specific-scripts/reject-management-queue-detail.js"></script>
+</body>
+
+</html>

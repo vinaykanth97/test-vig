@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./images/favicon-med.ico">
+  <title>Fiserv Vigilance Lite | Investigation Queue</title>
+  <!-- Bootstrap Css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!-- Datatables css -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css">
+  <link href="https://cdn.datatables.net/fixedcolumns/3.3.1/css/fixedColumns.dataTables.css" rel="stylesheet"
+    type="text/css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.5.5/css/colReorder.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.1/css/fixedHeader.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+  <!-- Custom Style Sheet -->
+  <link href="css/style.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Wrapper Starts -->
+  <div id="wrapper" class="includes-popup">
+    <!-- Popup starts-->
+    <div class="popup-main">
+      <div class="popup-sticky-overall">
+        <div class="popup-container container overflow-visible">
+          <div class="sticky-summary">
+            <div class="right-opt d-flex align-items-center">
+              <label class="switch_button">
+                <input type="checkbox" id="popup_toggle" class="popup_toggle">
+                <span>COLLAPSE</span>
+              </label>
+
+              <button type="button" class="btn iconic-button print-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="0.938rem" height="0.844rem" viewBox="0 0 15 13.5">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #666;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <g id="print-d-grey">
+                        <g id="print-24px">
+                          <path data-name="Path 25993" class="cls-1"
+                            d="M12.75,3.75H2.25A2.24,2.24,0,0,0,0,6H0v4.5H3v3h9v-3h3V6a2.24,2.24,0,0,0-2.24-2.25ZM10.5,12h-6V8.25h6Zm2.25-5.25A.75.75,0,1,1,13.5,6,.76.76,0,0,1,12.75,6.75ZM12,0H3V3h9Z">
+                          </path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                PRINT
+              </button>
+            </div>
+            <div class="popup_subcontainer">
+              <div class="d-flex">
+                <div class="flex_50 pgwhite d-flex flex-column">
+                  <div class="p_head">MERCHANT SUMMARY</div>
+                  <div class="d-flex h-100 ">
+                    <div class="d-flex flex-wrap flex_50">
+                      <div class="d-flex wdh_100">
+                        <div class="popup-row flex_60 popup-bb">
+                          <p>MERCHANT ID</p>
+                          <h4>530961200064640</h4>
+                        </div>
+                        <div class="popup-row flex_40 popup-bb popup-bl">
+                          <p># OF OUTLETS</p>
+                          <h4>08</h4>
+                        </div>
+                      </div>
+                      <div class="d-flex wdh_100">
+                        <div class="popup-row flex_60 popup-bb">
+                          <p>CHAIN ID</p>
+                          <h4>12848822</h4>
+                        </div>
+                        <div class="popup-row flex_40 popup-bl popup-bb">
+                          <p>DBA CITY</p>
+                          <h4>CHENNAI</h4>
+                        </div>
+                      </div>
+                      <div class="d-flex wdh_100">
+                        <div class="popup-row flex_60 popup-bb">
+                          <p>DBA NAME</p>
+                          <h4>STAHL’S GOAT ROPING</h4>
+                        </div>
+                        <div class="popup-row flex_40 popup-bl popup-bb">
+                          <p>DBA STATE</p>
+                          <h4>TAMIL NADU</h4>
+                        </div>
+                      </div>
+                      <div class="d-flex wdh_100">
+                        <div class="popup-row flex_60 popup-bb">
+                          <p>LEGAL NAME</p>
+                          <h4>STAHL’S</h4>
+                        </div>
+                        <div class="popup-row flex_40 popup-bl popup-bb">
+                          <p>SIGNED DATE</p>
+                          <h4>12/02/2022</h4>
+                        </div>
+                      </div>
+                      <div class="d-flex wdh_100">
+                        <div class="popup-row flex_60">
+                          <p>ACCOUNT STATUS</p>
+                          <h4>ACTIVE</h4>
+                        </div>
+                        <div class="popup-row flex_40 popup-bl ">
+                          <p>SIGNED VOLUME</p>
+                          <h4>00</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex_50 popup-detail d-flex flex-column justify-content-between">
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>Platform</p>
+                        <p>:</p>
+                        <h4>DEV Platform</h4>
+                      </div>
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>Portfolio</p>
+                        <p>:</p>
+                        <h4>05</h4>
+                      </div>
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>Risk Ownership</p>
+                        <p>:</p>
+                        <h4>YES</h4>
+                      </div>
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>MCC</p>
+                        <p>:</p>
+                        <h4>YES</h4>
+                      </div>
+
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>Relationship Manager</p>
+                        <p>:</p>
+                        <h4>Manager</h4>
+                      </div>
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>Product SVCS Sold</p>
+                        <p>:</p>
+                        <h4>Products</h4>
+                      </div>
+
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>Signed Internet/ MOTO</p>
+                        <p>:</p>
+                        <h4>YES</h4>
+                      </div>
+                      <div class="d-flex popup-bb pd_div popup-bl">
+                        <p>First Post Date</p>
+                        <p>:</p>
+                        <h4>12/05/2022</h4>
+                      </div>
+
+
+                      <div class="d-flex pd_div popup-bl popup-bb">
+                        <p>NACHA Date</p>
+                        <p>:</p>
+                        <h4>13/06/2022</h4>
+                      </div>
+                      <div class="d-flex pd_div popup-bl">
+                        <p>Last Review Date</p>
+                        <p>:</p>
+                        <h4>17/07/2022</h4>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="flex_30 ml10 pgwhite d-flex flex-column">
+                  <div class="p_head">LIMITS & BALANCES</div>
+                  <div class="d-flex h-100 flex-column justify-content-between">
+                    <div class="d-flex flex-wrap h-100">
+                      <div class="popup-row flex_40 popup-bb">
+                        <p>DAILY FUNDING LIMIT</p>
+                        <h4>$30,000</h4>
+                      </div>
+                      <div class="popup-row flex_60 popup-bb popup-bl">
+                        <p>FUNDING EXCLUSION BALANCE</p>
+                        <h4>$30,000</h4>
+                      </div>
+                      <div class="popup-row flex_40 popup-bb">
+                        <p>30 DAY FUNDING LIMIT</p>
+                        <h4>$90,000</h4>
+                      </div>
+                      <div class="popup-row flex_60 popup-bl popup-bb">
+                        <p>PTS SALE HOLD AMOUNT</p>
+                        <h4>$90,000</h4>
+                      </div>
+
+                      <div class="popup-row flex_40 popup-bb">
+                        <p>PTS SALE LIMIT</p>
+                        <h4>$10,000</h4>
+                      </div>
+                      <div class="popup-row flex_60 popup-bl popup-bb">
+                        <p>PTS REFUND HOLD AMOUNT</p>
+                        <h4>$10,000</h4>
+                      </div>
+
+                      <div class="popup-row flex_40 popup-bb">
+                        <p>PTS REFUND LIMIT</p>
+                        <h4>$10,000</h4>
+                      </div>
+                      <div class="popup-row flex_60 popup-bl popup-bb">
+                        <p>MBM BALANCE</p>
+                        <h4>$10,000</h4>
+                      </div>
+
+                      <div class="popup-row flex_40">
+                        <p>PTS CUMM REFUND</p>
+                        <h4>$10,000</h4>
+                      </div>
+                      <div class="popup-row flex_60 popup-bl">
+                        <p>RPP BALANCE</p>
+                        <h4>$10,000</h4>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="flex_20 ml10 pgwhite d-flex flex-column">
+                  <div class="p_head">KEY INDICATORS</div>
+                  <div class="d-flex flex-column h-100 justify-content-around">
+                    <div class="popup-row flex_100 popup-bb d-flex justify-content-between align-items-center">
+                      <div class="property-set">
+                        <p>PR BOOL</p>
+                        <h4>No</h4>
+                      </div>
+                      <figure class="property-action">
+                        <img src="./images/personal-wrong.svg" alt="">
+                      </figure>
+                    </div>
+                    <div class="popup-row flex_100 popup-bb d-flex justify-content-between align-items-center">
+                      <div class="property-set">
+                        <p>HIGH RISK</p>
+                        <h4>Yes</h4>
+                      </div>
+                      <figure class="property-action">
+                        <img src="./images/true-boolean.svg" alt="">
+                      </figure>
+                    </div>
+                    <div class="popup-row flex_100 popup-bb d-flex justify-content-between align-items-center">
+                      <div class="property-set">
+                        <p>WISO</p>
+                        <h4>No</h4>
+                      </div>
+                      <figure class="property-action">
+                        <img src="./images/personal-wrong.svg" alt="">
+                      </figure>
+                    </div>
+                    <div class="popup-row flex_100 popup-bb d-flex justify-content-between align-items-center">
+                      <div class="property-set">
+                        <p>CLOVER CAPITAL</p>
+                        <h4>Yes</h4>
+                      </div>
+                      <figure class="property-action">
+                        <img src="./images/true-boolean.svg" alt="">
+                      </figure>
+                    </div>
+                    <div class="popup-row flex_100 d-flex justify-content-between align-items-center">
+                      <div class="property-set">
+                        <p>TMF</p>
+                        <h4>Yes</h4>
+                      </div>
+                      <figure class="property-action">
+                        <img src="./images/true-boolean.svg" alt="">
+                      </figure>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="overlay d-none"></div>
+      </div>
+
+      <div class="popup-table-overall">
+
+        <div class="popup_tab">
+          <div class="container">
+            <nav id="popup_tab" class="navbar p-0">
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" href="javascript:void(0)" data-target="processing_history">PROCESSING
+                    HISTORY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" data-target="batch_related">BATCH DATA &#38; RELATED
+                    ALERTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)" data-target="authorization_details">TRANSACTION DETAILS
+                    &#38; AUTHORIZATION DETAILS</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="container">
+          <div class="popup_scrollspy">
+            <div id="processing_history" class="popup_scrollspy_cnt">
+              <div class="popup_scrollspy_head d-flex align-items-center">
+                <p>PROCESSING HISTORY</p>
+                <div class="d-flex popup_btns ms-auto">
+                  <div class="dropdown ms-auto popup_dropdown me-2">
+                    <button class="btn dropdown-toggle dropdown-angle" type="button">
+                      <span class="cl-cntrl-icon">
+                        <img src="./images/column-control-toggle.svg" alt="">
+                      </span>Customise
+                      Columns
+                    </button>
+                    <div class="popup_dropdown_menu">
+                      <div class="d-flex dropdown_pad_head popup_bb">
+                        <div class="check label_pr check_minwdh">
+                          <input id="selectall" type="checkbox" checked="" class="select_all">
+
+                          <label for="selectall">SELECT ALL</label>
+                        </div>
+
+                      </div>
+                      <div class="d-flex popup_bb">
+                        <div class="flex_50 dropdown_pad popup_br">
+                          <div class="check">
+                            <input id="credit_sale" type="checkbox" checked="" class="custom_column"
+                              data-id="credit-sale">
+
+                            <label for="credit_sale">CREDIT SALE</label>
+                          </div>
+                        </div>
+                        <div class="flex_50 dropdown_pad">
+                          <div class="check flex_50">
+                            <input id="debit_card" type="checkbox" class="custom_column" data-id="debit-card"
+                              checked="">
+
+                            <label for="debit_card">DEBIT CARD</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex popup_bb">
+                        <div class="flex_50 dropdown_pad popup_br">
+                          <div class="check">
+                            <input id="credit_refund" type="checkbox" checked="" class="custom_column "
+                              data-id="credit-refunds">
+
+                            <label for="credit_refund">CREDIT REFUNDS</label>
+                          </div>
+                        </div>
+                        <div class="flex_50 dropdown_pad">
+                          <div class="check flex_50">
+                            <input id="auth" type="checkbox" class="custom_column " checked="" data-id="authorizations">
+
+                            <label for="auth">AUTHORIZATIONS</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex popup_bb">
+                        <div class="flex_50 dropdown_pad popup_br">
+                          <div class="check">
+                            <input id="chargeback" type="checkbox" checked="" class="custom_column"
+                              data-id=" chargebacks">
+
+                            <label for="chargeback">CHARGEBACKS</label>
+                          </div>
+                        </div>
+                        <div class="flex_50 dropdown_pad">
+                          <div class="check flex_50">
+                            <input id="forced_sales" type="checkbox" class="custom_column " checked=""
+                              data-id="forced-sales">
+
+                            <label for="forced_sales">FORCED SALES</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="flex_50 popup_bb dropdown_pad popup_br">
+                          <div class="check">
+                            <input id="cb_reversals" type="checkbox" checked="" class="custom_column "
+                              data-id="cb-reversal">
+
+                            <label for="cb_reversals">CB REVERSALS</label>
+                          </div>
+                        </div>
+                        <div class="flex_50"></div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="flex_50 popup_bb dropdown_pad popup_br">
+                          <div class="check">
+                            <input id="entry_method" type="checkbox" checked="" class="custom_column"
+                              data-id="entry-method">
+
+                            <label for="entry_method">ENTRY METHOD %</label>
+                          </div>
+                        </div>
+                        <div class="flex_50"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="export_excel_btn">
+                  </div>
+                  <div class="processing-history-details pagination-provision d-flex align-items-center">
+                  </div>
+                </div>
+              </div>
+              <div class="process_overflow overflow-history">
+                <table id="process_datatable" class="popup_dataTables mb-0">
+                  <thead class="sortable-columns-customs">
+                    <tr>
+                      <th rowspan="2">MONTH</th>
+                      <th class="complex_header complex_credit_sale text-center" colspan="3">CREDIT SALE</th>
+                      <th class="complex_header complex_credit_refunds text-center" colspan="4">CREDIT REFUNDS</th>
+                      <th class="complex_header complex_chargebacks text-center" colspan="4">CHARGEBACKS</th>
+                      <th class="complex_header complex_cbreversal text-center" colspan="3">CB REVERSALS</th>
+                      <th class="complex_header complex_entry_method text-center" colspan="4">ENTRY METHOD %</th>
+                      <th class="complex_header complex_debit_card_sale text-center bg_brown" colspan="3">DEBIT CARD
+                        SALE
+                        <span class="expand-column stretch-control " data-trigger="debit-card" data-color="#f3b823">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+                            <g data-name="Group 10297" transform="translate(9265 16702)">
+                              <rect data-name="Rectangle 3566" width="37" height="37" rx="18.5"
+                                transform="translate(-9265 -16702)" fill="#0e0e0e" />
+                              <g transform="translate(-9234.5 -16695) rotate(90)">
+                                <g data-name="Group 10293">
+                                  <path data-name="Path 26530" d="M0,0H24V24H0Z" fill="none" />
+                                </g>
+                                <g data-name="Group 10295">
+                                  <g data-name="Group 10294">
+                                    <rect data-name="Rectangle 3568" width="16" height="2" transform="translate(4 20)"
+                                      fill="#f3b823" />
+                                    <rect data-name="Rectangle 3569" width="16" height="2" transform="translate(4 2)"
+                                      fill="#f3b823" />
+                                    <path data-name="Path 26531"
+                                      d="M9.41,13.59,8,15l4,4,4-4-1.41-1.41L13,15.17V8.83l1.59,1.58L16,9,12,5,8,9l1.41,1.41L11,8.83v6.34Z"
+                                      fill="#f3b823" />
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </th>
+                      <th class="complex_header complex_debit_card_refunds text-center bg_brown" colspan="4">DEBIT CARD
+                        REFUNDS</th>
+                      <th class="complex_header complex_debit_card_chargebacks text-center bg_brown" colspan="4">DEBIT
+                        CARD CHARGEBACKS
+                      </th>
+                      <th class="bg_blue authorizations" rowspan="2">AUTHORIZATIONS</th>
+                      <th class="complex_header complex_forced_sales text-center bg_redbrown" colspan="4">FORCED SALES
+                        <span class="expand-column stretch-control" data-trigger="forced-sales" data-color="#FF6600">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+                            <g data-name="Group 10297" transform="translate(9265 16702)">
+                              <rect data-name="Rectangle 3566" width="37" height="37" rx="18.5"
+                                transform="translate(-9265 -16702)" fill="#0e0e0e" />
+                              <g transform="translate(-9234.5 -16695) rotate(90)">
+                                <g data-name="Group 10293">
+                                  <path data-name="Path 26530" d="M0,0H24V24H0Z" fill="none" />
+                                </g>
+                                <g data-name="Group 10295">
+                                  <g data-name="Group 10294">
+                                    <rect data-name="Rectangle 3568" width="16" height="2" transform="translate(4 20)"
+                                      fill="#FF6600" />
+                                    <rect data-name="Rectangle 3569" width="16" height="2" transform="translate(4 2)"
+                                      fill="#FF6600" />
+                                    <path data-name="Path 26531"
+                                      d="M9.41,13.59,8,15l4,4,4-4-1.41-1.41L13,15.17V8.83l1.59,1.58L16,9,12,5,8,9l1.41,1.41L11,8.83v6.34Z"
+                                      fill="#FF6600" />
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </th>
+                      <th class="complex_header complex_forced_test text-center bg_redbrown" colspan="4">FORCED Test
+                      </th>
+                    </tr>
+                    <tr>
+                      <th class="complex_credit_sale credit-sale">COUNT</th>
+                      <th class="complex_credit_sale credit-sale">VOLUME</th>
+                      <th class="complex_credit_sale credit-sale">A/T</th>
+                      <th class="complex_credit_refunds credit-refunds">COUNT</th>
+                      <th class="complex_credit_refunds credit-refunds">VOLUME</th>
+                      <th class="complex_credit_refunds credit-refunds">A/T</th>
+                      <th class="complex_credit_refunds credit-refunds">%</th>
+                      <th class="complex_chargebacks chargebacks">COUNT</th>
+                      <th class="complex_chargebacks chargebacks">VOLUME</th>
+                      <th class="complex_chargebacks chargebacks">A/T</th>
+                      <th class="complex_chargebacks chargebacks">%</th>
+                      <th class="complex_cbreversal cb-reversal">COUNT</th>
+                      <th class="complex_cbreversal cb-reversal">VOLUME</th>
+                      <th class="complex_cbreversal cb-reversal">%</th>
+                      <th class="complex_entry_method entry-method">KEYED</th>
+                      <th class="complex_entry_method entry-method">ECOMM</th>
+                      <th class="complex_entry_method entry-method">CHIPPED</th>
+                      <th class="complex_entry_method entry-method">SWIPED</th>
+                      <th class="complex_debit_card_sale bg_brown debit-card">COUNT</th>
+                      <th class="complex_debit_card_sale bg_brown debit-card">VOLUME</th>
+                      <th class="complex_debit_card_sale bg_brown debit-card">A/T</th>
+                      <th class="complex_debit_card_refunds bg_brown debit-card partial-column">COUNT</th>
+                      <th class="complex_debit_card_refunds bg_brown debit-card partial-column">VOLUME</th>
+                      <th class="complex_debit_card_refunds bg_brown debit-card partial-column">A/T</th>
+                      <th class="complex_debit_card_refunds bg_brown debit-card partial-column">%</th>
+                      <th class="complex_debit_card_chargebacks bg_brown debit-card partial-column">COUNT</th>
+                      <th class="complex_debit_card_chargebacks bg_brown debit-card partial-column">VOLUME</th>
+                      <th class="complex_debit_card_chargebacks bg_brown debit-card partial-column">A/T</th>
+                      <th class="complex_debit_card_chargebacks bg_brown debit-card partial-column">%</th>
+                      <th class="complex_forced_sales bg_redbrown forced-sales">COUNT</th>
+                      <th class="complex_forced_sales bg_redbrown forced-sales">VOLUME</th>
+                      <th class="complex_forced_sales bg_redbrown forced-sales">A/T</th>
+                      <th class="complex_forced_sales bg_redbrown forced-sales">%</th>
+                      <th class="complex_forced_test bg_redbrown forced-sales partial-column">COUNT</th>
+                      <th class="complex_forced_test bg_redbrown forced-sales partial-column">VOLUME</th>
+                      <th class="complex_forced_test bg_redbrown forced-sales partial-column">A/T</th>
+                      <th class="complex_forced_test bg_redbrown forced-sales partial-column">%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Daily</td>
+                      <td>564</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Last 12 Month</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Jan-22</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Dec-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Nov-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Oct-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Sep-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Aug-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Jul-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Jun-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>May-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Apr-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Mar-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Feb-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                    <tr>
+                      <td>Jan-21</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td class="color_grey">Lorem Ipsum</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                      <td>234</td>
+                      <td>$4,567</td>
+                      <td>9,876</td>
+                      <td>35%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="row popup_scrollspy_cnt" id="batch_related">
+              <div class=" col-md-6 batch_related" id="batch_table">
+                <div class="popup_scrollspy_head d-flex align-items-center">
+                  <p>BATCH DATA</p>
+                  <div class="d-flex popup_btns ms-auto">
+                    <div class="export_excel_btn"></div>
+                    <div class="batch-data-details pagination-provision d-flex align-items-center">
+                    </div>
+                  </div>
+                </div>
+                <div class="process_overflow overflow-batch-data">
+                  <table id="batch_datatable" class="popup_dataTables mb-0">
+                    <thead>
+                      <tr>
+                        <th rowspan="2">BATCH DATE</th>
+                        <th class="complex_header complex_batch_credit text-center" colspan="2">CREDIT</th>
+                        <th class="complex_header complex_batch_debit text-center" colspan="2">DEBIT</th>
+                        <th class="complex_header complex_batch_total text-center" colspan="2">TOTAL</th>
+                      </tr>
+                      <tr>
+                        <th class="complex_batch_credit">BATCH AMOUNT</th>
+                        <th class="complex_batch_credit">BATCH COUNT</th>
+                        <th class="complex_batch_debit">BATCH AMOUNT</th>
+                        <th class="complex_batch_debit">BATCH COUNT</th>
+                        <th class="complex_batch_total">BATCH AMOUNT</th>
+                        <th class="complex_batch_total">BATCH COUNT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                      </tr>
+                      <tr>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                      </tr>
+                      <tr>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                      </tr>
+                      <tr>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                        <td>$4,656,787</td>
+                        <td>9,876</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-md-6 related-alerts-sec" id="related_table">
+                <div class="popup_scrollspy_head d-flex align-items-center">
+                  <p>RELATED ALERTS</p>
+                  <div class="d-flex popup_btns ms-auto">
+                    <div class="export_excel_btn"></div>
+                    <div class="related-alerts-details pagination-provision d-flex align-items-center">
+                    </div>
+                  </div>
+                </div>
+                <div class="process_overflow related-overflow">
+                  <table id="related_datatable" class="popup_dataTables mb-0">
+                    <thead>
+                      <tr>
+                        <th>ALERT ID</th>
+                        <th>ALERT DATE</th>
+                        <th>ALERT TYPE</th>
+                        <th>DECISION</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>80988</td>
+                        <td>21/12/2021</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+                      </tr>
+                      <tr>
+                        <td>80988</td>
+                        <td>21/12/2021</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+                      </tr>
+                      <tr>
+                        <td>80988</td>
+                        <td>21/12/2021</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+                      </tr>
+                      <tr>
+                        <td>80988</td>
+                        <td>21/12/2021</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row popup_scrollspy_cnt" id="authorization_details">
+              <div class="col-md-6 transaction-details-overall">
+                <div class="popup_scrollspy_head d-flex align-items-center">
+                  <p>TRANSACTION</p>
+                  <div class="d-flex popup_btns ms-auto" id="trans_table">
+                    <div class="export_excel_btn"></div>
+                    <div class="transaction-details-info pagination-provision d-flex align-items-center">
+                    </div>
+                  </div>
+                </div>
+                <div class="process_overflow transaction-overflow">
+                  <table id="trans_datatable" class="popup_dataTables mb-0">
+                    <thead>
+                      <tr>
+                        <th rowspan="2">CARD NUMBER</th>
+                        <th class="text-center complex_header complex_trans" colspan="2">TRANSACTION</th>
+                        <th rowspan="2">POS</th>
+                        <th rowspan="2">TRANS. ID</th>
+                        <th class="text-center complex_header complex_trans_auth" colspan="3">AUTHORIZATION</th>
+                        <th rowspan="2">ISSUER NAME</th>
+                      </tr>
+                      <tr>
+                        <th class="complex_trans">DATE</th>
+                        <th class="complex_trans">AMOUNT</th>
+                        <th class="complex_trans_auth">VOLUME</th>
+                        <th class="complex_trans_auth">AMOUNT</th>
+                        <th class="complex_trans_auth">DATE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>Lorem Ipsum</td>
+                        <td>895890</td>
+                        <td>6,787,980</td>
+                        <td>$9,489,689</td>
+                        <td>26/01/2021</td>
+                        <td>Lorem Ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>Lorem Ipsum</td>
+                        <td>895890</td>
+                        <td>6,787,980</td>
+                        <td>$9,489,689</td>
+                        <td>26/01/2021</td>
+                        <td>Lorem Ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>Lorem Ipsum</td>
+                        <td>895890</td>
+                        <td>6,787,980</td>
+                        <td>$9,489,689</td>
+                        <td>26/01/2021</td>
+                        <td>Lorem Ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>12/12/2021</td>
+                        <td>$4,656,787</td>
+                        <td>Lorem Ipsum</td>
+                        <td>895890</td>
+                        <td>6,787,980</td>
+                        <td>$9,489,689</td>
+                        <td>26/01/2021</td>
+                        <td>Lorem Ipsum</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-md-6 authorization-detail-overall" id="auth_table">
+                <div class="popup_scrollspy_head d-flex align-items-center">
+                  <p>AUTHORIZATION</p>
+                  <div class="d-flex popup_btns ms-auto">
+                    <div class="export_excel_btn"></div>
+                    <div class="authorization-details pagination-provision d-flex align-items-center">
+                    </div>
+                  </div>
+                </div>
+                <div class="process_overflow authorization-overflow">
+                  <table id="auth_datatable" class="popup_dataTables mb-0">
+                    <thead>
+                      <tr>
+                        <th rowspan="2">CARD NUMBER</th>
+                        <th rowspan="2">AMOUNT</th>
+                        <th rowspan="2">RESPONSE CODE</th>
+                        <th colspan="3" class="text-center complex_header complex_auth">AUTHORIZATION</th>
+                      </tr>
+                      <tr>
+                        <th class="complex_auth">CODE</th>
+                        <th class="complex_auth">DATE</th>
+                        <th class="complex_auth">TIME</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>$6,86,756</td>
+                        <td>Lorem Ipsum</td>
+                        <td>6,787,980</td>
+                        <td>26/01/2021</td>
+                        <td>02:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>$6,86,756</td>
+                        <td>Lorem Ipsum</td>
+                        <td>6,787,980</td>
+                        <td>26/01/2021</td>
+                        <td>02:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>$6,86,756</td>
+                        <td>Lorem Ipsum</td>
+                        <td>6,787,980</td>
+                        <td>26/01/2021</td>
+                        <td>02:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>000000448261XXXXXX1185</td>
+                        <td>$6,86,756</td>
+                        <td>Lorem Ipsum</td>
+                        <td>6,787,980</td>
+                        <td>26/01/2021</td>
+                        <td>02:00 pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Popup Ends -->
+  </div>
+  <!-- wrapper Ends -->
+  <!-- Required scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-fixedcolumns/4.0.1/dataTables.fixedColumns.min.js"
+    integrity="sha512-IbXq1GVWD6Y/xZ0CcveVX+sYoKTJUs83AZNnBS1Rwg+ymrpTKiFPTPpqfWSUN0cRophBOKFpZsYk7BHnHzjaWA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.datatables.net/colreorder/1.5.5/js/dataTables.colReorder.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.2.1/js/dataTables.fixedHeader.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="./js/vendor/dragScroll.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/page-specific-scripts/popup.js"></script>
+
+  <!-- <script src="./js/page-specific-scripts/popup.js"></script> -->
+</body>
+
+</html>

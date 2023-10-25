@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="money-1-mild" transform="translate(-247.5 -654.5)">
+    <circle id="Ellipse_918" data-name="Ellipse 918" cx="23" cy="23" r="23" transform="translate(247.5 654.5)" fill="#f9ede5"/>
+    <g id="Group_9639" data-name="Group 9639" transform="translate(258.498 670)">
+      <line id="Line_1007" data-name="Line 1007" y1="1" transform="translate(12.004 3.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <g id="Group_9638" data-name="Group 9638">
+        <g id="Group_9640" data-name="Group 9640">
+          <path id="Path_26472" data-name="Path 26472" d="M13.5,4.5H11.471a1.342,1.342,0,0,0-.5,2.587l2.064.826a1.342,1.342,0,0,1-.5,2.587H10.5" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Line_1008" data-name="Line 1008" y1="1" transform="translate(12.004 10.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="Path_26473" data-name="Path 26473" d="M7.5,1.5h-6a1,1,0,0,0-1,1v10a1,1,0,0,0,1,1h6" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="Path_26474" data-name="Path 26474" d="M16.5,13.5h6a1,1,0,0,0,1-1V2.5a1,1,0,0,0-1-1h-6" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Line_1009" data-name="Line 1009" x2="5" transform="translate(0.504 4.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Line_1010" data-name="Line 1010" x2="5" transform="translate(0.504 10.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Line_1011" data-name="Line 1011" x2="5" transform="translate(0.504 7.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Line_1012" data-name="Line 1012" x2="5" transform="translate(18.504 4.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Line_1013" data-name="Line 1013" x2="5" transform="translate(18.504 10.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Line_1014" data-name="Line 1014" x2="5" transform="translate(18.504 7.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="Rectangle_3292" data-name="Rectangle 3292" width="9" height="14" rx="1" transform="translate(7.504 0.5)" fill="none" stroke="#f60" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

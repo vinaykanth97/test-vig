@@ -1,0 +1,6 @@
+<svg id="add-grey" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Rectangle_2318" data-name="Rectangle 2318" width="24" height="24" fill="#fff" opacity="0"/>
+  <circle id="Ellipse_828" data-name="Ellipse 828" cx="10" cy="10" r="10" transform="translate(2 2)" fill="#afafaf"/>
+  <circle id="Ellipse_827" data-name="Ellipse 827" cx="10" cy="10" r="10" transform="translate(2 2)" fill="#afafaf"/>
+  <path id="Union_3" data-name="Union 3" d="M4,10V6H0V4H4V0H6V4h4V6H6v4Z" transform="translate(7 7)" fill="#fff"/>
+</svg>

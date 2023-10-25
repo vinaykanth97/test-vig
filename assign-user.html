@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon-med.ico">
+    <title>Assign User</title>
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- Datatables css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css">
+    <link href="https://cdn.datatables.net/fixedcolumns/3.3.1/css/fixedColumns.dataTables.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.5.5/css/colReorder.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.1/css/fixedHeader.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+    <!-- Custom Style Sheet -->
+    <link href="css/style.min.css" rel="stylesheet" />
+</head>
+
+<body class="investigation-popups">
+    <!-- Wrapper Starts -->
+    <div id="wrapper" class="includes-popup">
+        <div class="d-flex align-items-center justify-content-between popup-header">
+            <h3 class="popup-title">Assign User</h3>
+        </div>
+        <div class="popup-body assign-user">
+            <div class="d-flex">
+                <div class="left-assign">
+                    <div class="form-check radiobtn">
+                        <input class="form-check-input" type="radio" name="assign-radio" id="assign-me">
+                        <label class="form-check-label" for="assign-me">
+                            Assign to Me
+                        </label>
+                    </div>
+                    <div class="form-check radiobtn">
+                        <input class="form-check-input" type="radio" name="assign-radio" id="assign-user">
+                        <label class="form-check-label" for="assign-user">
+                            Assign to User
+                        </label>
+                    </div>
+                    <div class="form-check radiobtn">
+                        <input class="form-check-input" type="radio" name="assign-radio" id="unassign">
+                        <label class="form-check-label" for="unassign">
+                            Unassigned
+                        </label>
+                    </div>
+                </div>
+                <div class="right-assign">
+                    <div class="add-list d-flex">
+                        <div class="list-item d-flex align-items-center">
+                            <p>John</p>
+                            <a class="remove-list" href="javascript:void(0)">
+                                <img src="images/remove-list.svg" alt="remove list" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search-list">
+                        <div class="d-flex input-search assign-dropdown">
+                            <input type="text" placeholder="Search user…" />
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="javascript:void(0)">Mike</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="active">
+                                    <a class="dropdown-item" href="javascript:void(0)">John</a>
+                                </li>
+                            </ul>
+                            <button type="button" class="search-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="20" height="20" viewBox="0 0 20 20">
+                                    <defs>
+                                        <clipPath>
+                                            <rect id="Rectangle_3916" data-name="Rectangle 3916" width="20" height="20"
+                                                transform="translate(0.214 0)" fill="#666" />
+                                        </clipPath>
+                                    </defs>
+                                    <g id="Group_11713" data-name="Group 11713" transform="translate(-0.214 0)">
+                                        <g id="Group_11613" data-name="Group 11613" clip-path="url(#clip-path)">
+                                            <path id="Path_26806" data-name="Path 26806"
+                                                d="M19.7,19.12,15.082,14.5a8.71,8.71,0,1,0-.584.584L19.12,19.7a.413.413,0,1,0,.585-.584M.826,8.673a7.847,7.847,0,1,1,7.847,7.847A7.857,7.857,0,0,1,.826,8.673"
+                                                transform="translate(0 0.002)" fill="#666" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer d-flex justify-content-between">
+            <button type="button" class="btn iconic-button step-btn">
+                CONFIRM
+            </button>
+            <button type="button" class="btn iconic-button">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.5"
+                    height="18.5" viewBox="0 0 18.5 18.5">
+                    <defs>
+                        <clipPath id="clip-path">
+                            <rect id="Rectangle_3887" data-name="Rectangle 3887" width="18.5" height="18.5"
+                                fill="#666" />
+                        </clipPath>
+                    </defs>
+                    <g id="Group_11496" data-name="Group 11496" clip-path="url(#clip-path)">
+                        <path id="Path_26780" data-name="Path 26780"
+                            d="M16.01,21.021a5.01,5.01,0,1,1,5.01-5.01,5.016,5.016,0,0,1-5.01,5.01m0-9.25a4.24,4.24,0,1,0,4.24,4.24,4.245,4.245,0,0,0-4.24-4.24"
+                            transform="translate(-2.521 -2.521)" fill="#666" />
+                        <path id="Path_26781" data-name="Path 26781"
+                            d="M17.385,19.4A.386.386,0,0,1,17,19.01V14.385a.385.385,0,1,1,.771,0V19.01a.386.386,0,0,1-.385.385"
+                            transform="translate(-3.896 -3.208)" fill="#666" />
+                        <path id="Path_26782" data-name="Path 26782"
+                            d="M19.01,17.771H14.385a.385.385,0,1,1,0-.771H19.01a.385.385,0,1,1,0,.771"
+                            transform="translate(-3.208 -3.896)" fill="#666" />
+                        <path id="Path_26783" data-name="Path 26783"
+                            d="M11.708,8.771H4.385a.385.385,0,1,1,0-.771h7.323a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -1.833)" fill="#666" />
+                        <path id="Path_26784" data-name="Path 26784"
+                            d="M9.01,11.771H4.385a.385.385,0,0,1,0-.771H9.01a.385.385,0,0,1,0,.771"
+                            transform="translate(-0.917 -2.521)" fill="#666" />
+                        <path id="Path_26785" data-name="Path 26785"
+                            d="M9.781,5.771h-5.4a.385.385,0,0,1,0-.771h5.4a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -1.146)" fill="#666" />
+                        <path id="Path_26786" data-name="Path 26786"
+                            d="M7.469,14.771H4.385a.385.385,0,0,1,0-.771H7.469a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -3.208)" fill="#666" />
+                        <path id="Path_26787" data-name="Path 26787"
+                            d="M7.469,17.771H4.385a.385.385,0,0,1,0-.771H7.469a.385.385,0,1,1,0,.771"
+                            transform="translate(-0.917 -3.896)" fill="#666" />
+                        <path id="Path_26788" data-name="Path 26788"
+                            d="M8.094,18.5H1.156A1.158,1.158,0,0,1,0,17.344V1.156A1.158,1.158,0,0,1,1.156,0H11.4a1.152,1.152,0,0,1,.818.338L15.078,3.2a1.152,1.152,0,0,1,.338.818V6.552a.385.385,0,1,1-.771,0V4.014a.382.382,0,0,0-.113-.272L11.676.883A.394.394,0,0,0,11.4.771H1.156a.386.386,0,0,0-.385.385V17.344a.386.386,0,0,0,.385.385H8.094a.385.385,0,0,1,0,.771"
+                            fill="#666" />
+                    </g>
+                </svg>
+                ADD NOTES
+            </button>
+        </div>
+    </div>
+    <!-- wrapper Ends -->
+    <!-- Required scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-fixedcolumns/4.0.1/dataTables.fixedColumns.min.js"
+        integrity="sha512-IbXq1GVWD6Y/xZ0CcveVX+sYoKTJUs83AZNnBS1Rwg+ymrpTKiFPTPpqfWSUN0cRophBOKFpZsYk7BHnHzjaWA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.5/js/dataTables.colReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.2.1/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="./js/vendor/dragScroll.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/page-specific-scripts/investigation-popup.js"></script>
+
+    <!-- <script src="./js/page-specific-scripts/popup.js"></script> -->
+</body>
+
+</html>

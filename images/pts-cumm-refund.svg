@@ -1,0 +1,31 @@
+<svg id="Group_10377" data-name="Group 10377" xmlns="http://www.w3.org/2000/svg" width="42" height="42.934" viewBox="0 0 42 42.934">
+  <ellipse id="Ellipse_918" data-name="Ellipse 918" cx="21" cy="21.467" rx="21" ry="21.467" transform="translate(0)" fill="#e9f3fa"/>
+  <g id="Group_10209" data-name="Group 10209" transform="translate(9.513 8.857)">
+    <line id="Line_1024" data-name="Line 1024" y1="7.68" transform="translate(2 11.431)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <g id="Group_9649" data-name="Group 9649" transform="translate(0 11.431)">
+      <g id="Group_9656" data-name="Group 9656">
+        <line id="Line_1025" data-name="Line 1025" x2="5" transform="translate(1 7.68)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="Line_1026" data-name="Line 1026" x2="23" transform="translate(0 10.52)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="Line_1028" data-name="Line 1028" x2="5" transform="translate(1)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+    <line id="Line_1029" data-name="Line 1029" x2="5" transform="translate(9 19.111)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_1030" data-name="Line 1030" x2="5" transform="translate(9 11.431)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_1031" data-name="Line 1031" y1="7.68" transform="translate(5 11.431)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_1032" data-name="Line 1032" y1="7.68" transform="translate(10 11.431)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_1033" data-name="Line 1033" y1="7.68" transform="translate(13 11.431)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <g id="Group_9651" data-name="Group 9651" transform="translate(17 11.431)">
+      <g id="Group_9657" data-name="Group 9657">
+        <line id="Line_1034" data-name="Line 1034" x2="5" transform="translate(0 7.68)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="Line_1035" data-name="Line 1035" x2="5" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+    <line id="Line_1036" data-name="Line 1036" y1="7.68" transform="translate(18 11.431)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_1037" data-name="Line 1037" y1="7.68" transform="translate(21 11.431)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <g id="Group_9653" data-name="Group 9653" transform="translate(0.953)">
+      <g id="Group_9654" data-name="Group 9654">
+        <path id="Path_26492" data-name="Path 26492" d="M1.646,8.151a.469.469,0,0,0-.166.535.5.5,0,0,0,.474.324h20.1a.5.5,0,0,0,.475-.323.469.469,0,0,0-.166-.535L12.339.6a.516.516,0,0,0-.616,0Z" transform="translate(-1.453 -0.5)" fill="none" stroke="#2e8bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
